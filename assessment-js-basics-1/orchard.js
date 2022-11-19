@@ -76,10 +76,20 @@ console.log(totalAcres1)
 
     Log `averageDailyAcres` to the console.
 */
-console.log(eval(totalAcres.join('+'))/totalAcres.length)
-// CODE HERE
+function getavg(totalAcres) {
+    const total = totalAcres.reduce((acc, c) => acc + c, 0)
+    return total / totalAcres.length
+}
+const average = getavg(totalAcres)
+
+console.log(average)
+
+
+//COMMENT: EX: console.log(eval(totalAcres.join('+'))/totalAcres.length)
 ///so here i console logged the average by having it add all the numbers inside total acres
 ///and then divid it by how many numbers were in the array.
+//I also did another solution where i addeded all the acres then divided it by how many were
+//in the array then got my average that way.
 
 
 
@@ -119,11 +129,16 @@ let days = 0
 
 // CODE HERE
 while (acresLeft <= 174) {
-    console.log()
+    console.log(acresLeft - average)
     acresLeft += 1
     days += 1
 }
 
+consonle.log(days)
+///COMMENT: okay so this one i used the while loop and had it count up to 174 and while its running
+// through the loop its subtracting acres left from average and while its doing that the days
+// are going up as well so it will tell you how many days they have left until they are finished
+//with everything
 
 // PROBLEM 4
 
@@ -151,9 +166,33 @@ while (acresLeft <= 174) {
 
 // CODE HERE
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+let fujiTons =[6.5]
+let galaTons =[6.5]
+let pinkTons =[6.5]
+for (let i = 0; i < fujiAcres.length; i++){
+    fujiTons = fujiTons * fujiAcres[i]
+    fujiTons.push(fujiTons)
+}
+
+console.log(fujiTons)
+
+for (let i = 0; i < galaAcres.length; i++){
+    galaTons = galaTons * galaAcres[i]
+    galaTons.push(galaTons)
+}
+
+consonle.log(galaTons)
+
+for (let i = 0; i < pinkAcres.length; i++){
+    pinkTons = pinkTons * pinkAcres[i]
+    pinkTons.push(pinkTons)
+}
+
+console.log(pinkTons)
+
+//COMMENT: so i did a for loop so it keeps running throught the length of the array and then i had
+//the result from that multiply the tons of fruit and the push it up to the array at the begginging
+//that way it updates the array with the new multiplied answer
 
 
 
@@ -175,9 +214,44 @@ while (acresLeft <= 174) {
 
     Hint: there are 2000 pounds in a ton.
 */
+const totalfuji = fujiTons.reduce(
+    (acc, c) => acc + c,
+    initialvalue 
+)
+let fujipounds = totalfuji * 2000
+
+console.log(fujipounds)
+
+const totalgala = galaTons.reduce(
+    (acc, c) => acc + c,
+    initialvalue 
+)
+
+let galapounds = totalgala * 2000
+
+
+console.log(galapounds)
+
+const totalpink = pinkTons.reduce(
+    (acc, c) => acc + c,
+    initialvalue 
+)
+let pinkpounds = totalpink * 2000
+
+console.log(pinkpounds)
+
+//COMMENT: so here i combined all of the tons fron the previous exercise and the multiplied it by 2000
+//to get the total amount of pounds
+
+
 
 // CODE HERE 
-
+//const initialvalue = 0
+//const totalAcres1 = totalAcres.reduce(
+ //   (accumulator, currentvalue) => accumulator + currentvalue,
+ //   initialvalue
+//)
+//console.log(totalAcres1)
 // let fujiPounds =
 // let galaPounds =
 // let pinkPounds =
@@ -205,11 +279,16 @@ while (acresLeft <= 174) {
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+let fujiProfit = fujipounds * fujiPrice
+let galaProfit = galapounds * galaPrice
+let pinkProfit = pinkpounds * pinkPrice
+console.log(fujiProfit)
+console.log(galaProfit)
+console.log(pinkProfit)
 
-
+//const fujiPrice = .89 
+//const galaPrice = .64
+//const pinkPrice = .55
 
 
 
@@ -223,5 +302,8 @@ while (acresLeft <= 174) {
 
     Log `totalProfit` to the console.
 */
+let totalprofit = fujiProfit + galaProfit + pinkProfit
+
+console.log(totalprofit)
 
 // CODE HERE
