@@ -5,7 +5,7 @@ const myname = "Chandler"
 
 //////////////////PROBLEM 2////////////////////
 /* Create a variable called 'faveNum' with a value that is your favorite number. */
-const favenum = "14"
+let favenum = "14"
 //CODE HERE
 
 //////////////////PROBLEM 3////////////////////
@@ -30,7 +30,7 @@ if (favenum === 13) {
 /*
   Write a for loop that prints out your faveNum 5 times.
 */
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < favenum.length; i++) {
   console.log(favenum)
 }
 //CODE HERE

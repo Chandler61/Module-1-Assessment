@@ -48,10 +48,20 @@ const pinkPrice = .55
 
     Log `totalAcres` to the console.
 */
-
+let totalAcres = []
+fujiAcres.addall(galaAcres, pinkAcres)
+totalAcres.push(fujiAcres)
+const initialvalue = 0
+const totalAcres1 = totalAcres.reduce(
+    (accumulator, currentvalue) => accumulator + currentvalue,
+    initialvalue
+)
+console.log(totalAcres1)
 // CODE HERE
 
-
+///Comments: reason i did the addall key was to combine all the acres together and then
+///called it total acres. then I needed to comnbine all of them together. so i used the 
+/// reduce key to combine all of them together to get the total acres. 
 
 
 
@@ -66,8 +76,10 @@ const pinkPrice = .55
 
     Log `averageDailyAcres` to the console.
 */
-
+console.log(eval(totalAcres.join('+'))/totalAcres.length)
 // CODE HERE
+///so here i console logged the average by having it add all the numbers inside total acres
+///and then divid it by how many numbers were in the array.
 
 
 
@@ -106,7 +118,11 @@ let acresLeft = 174
 let days = 0
 
 // CODE HERE
-
+while (acresLeft <= 174) {
+    console.log()
+    acresLeft += 1
+    days += 1
+}
 
 
 // PROBLEM 4
